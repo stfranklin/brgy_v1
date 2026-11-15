@@ -65,7 +65,6 @@ export function Profile({ go }) {
   return (
     <Page title='Profile'>
       <View className='mb-4 flex-row items-center rounded-2xl bg-card p-4'>
-        <Text className='mr-4 text-4xl'>👤</Text>
         <View>
           <Text className='text-lg font-bold text-white'>Zyruz Collado</Text>
           <Text className='text-muted'>Resident</Text>

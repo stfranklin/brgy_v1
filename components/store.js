@@ -4,7 +4,7 @@ export const STATUSES = ['Pending', 'Under Review', 'Approved', 'Ready for Claim
 const Ctx = createContext(null);
 export const useApp = () => useContext(Ctx);
 
-// Everything is kept in memory (resets on refresh). Swap for a database later.
+
 export function AppProvider({ children }) {
   const [requests, setRequests] = useState([]);
   const [bookings, setBookings] = useState([]);
@@ -30,7 +30,7 @@ export function AppProvider({ children }) {
   const isTaken = (kind, date, time) =>
     bookings.some((b) => b.kind === kind && b.date === date && b.time === time);
 
-  // Conflict detection: refuses a slot that is already reserved.
+
   const addBooking = (b) => {
     if (isTaken(b.kind, b.date, b.time)) return false;
     setBookings([{ ...b, id: Date.now() }, ...bookings]);

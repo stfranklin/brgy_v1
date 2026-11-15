@@ -8,7 +8,7 @@ const SLOTS = ['8:00 AM', '9:00 AM', '10:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'
 const SEEDED = { court: ['9:00 AM', '2:00 PM'], clinic: ['10:00 AM'] };
 const NURSES = ['Nurse Ana', 'Nurse Liza', 'Nurse Mae'];
 const CFG = {
-  court: { title: 'Court Scheduling', acc: 'bg-royal', note: 'Court fee: ₱200, paid at the Barangay Hall.' },
+  court: { title: 'Court Schedule', acc: 'bg-royal', note: 'Court fee: ₱200, paid at the Barangay Hall.' },
   clinic: { title: 'Clinic Appointment', acc: 'bg-crimson', note: 'Clinic hours: Mon to Fri, 8:00 AM to 4:00 PM.' },
 };
 const days = Array.from({ length: 7 }, (_, i) => {
@@ -44,7 +44,6 @@ export default function Schedule({ kind, onBack }) {
     return (
       <Page title='Booking confirmed'>
         <View className='rounded-2xl border-l-4 border-royal bg-card p-5'>
-          <Text className='text-4xl'>✅</Text>
           <Text className='mt-2 text-lg font-bold text-white'>{cfg.title}</Text>
           <Text className='mt-1 text-muted'>{done.date} at {done.time}</Text>
           {kind === 'clinic' && <Text className='text-muted'>{nurse} will attend to you.</Text>}

@@ -37,8 +37,7 @@ export default function Documents({ onBack }) {
     return (
       <Page title='Request submitted'>
         <View className='rounded-2xl border-l-4 border-crimson bg-card p-5'>
-          <Text className='text-4xl'>✅</Text>
-          <Text className='mt-2 text-muted'>Reference number</Text>
+          <Text className='text-sm text-muted'>Reference number</Text>
           <Text className='text-3xl font-bold text-white'>{done.ref}</Text>
           <Text className='mt-2 text-muted'>{done.doc} · Status: Pending</Text>
           <Text className='mt-2 text-muted'>Track it under My Requests. Bring a valid ID when claiming.</Text>
